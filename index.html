@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Card Design</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family:cursive;
+            cursor: pointer;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background-color: #3d0202;
+        }
+
+        .Menu-card {
+            background-color: #1a1a1a;
+            color: #db9c61;
+            border: 5px solid #530638; /* Fixed missing semicolon */
+            border-radius: 10px;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            width: 50vw;
+            max-width: 800px; /* Added max-width for larger screens */
+            height: auto;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .left-side, .right-side {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .left-side {
+            width: 50%;
+            background-color: #1a1a1a;
+            flex-direction: column;
+            justify-content: center; 
+            align-items: center; 
+            text-align: center;
+        }
+
+        .right-side {
+            width: 50%;
+            background-color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content:center; 
+            align-items:center; 
+            text-align:center;
+        }
+
+        .large-text {
+            font-size: 4rem;
+            color: #e0ddea;
+            margin-bottom: 5px;
+            font-family: cursive;
+            text-align:center;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: #d1128b;
+            cursor: pointer;
+            font-family: cursive;
+            margin-bottom: 5px;
+            text-align:center;
+        }
+
+        p {
+            font-size: 1rem;
+            margin: 5px 0;
+            font-family: cursive;
+            text-align:center;
+        }
+
+        .small-text {
+            font-size: 1rem;
+            color: #d1128b;
+            font-family:cursive;
+            margin: 10px 0;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            background-image: url('icon.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-bottom: 10px;
+            align-self: center;
+        }
+
+        .img img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            border: 2px solid #e2c416;
+        }
+
+        .img {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+            align-items: center;
+            gap: 10px;
+        }
+
+        footer {
+            width: 100%;
+            padding: 10px; 
+            text-align: center; 
+            background-color: #444;
+            color: #ddd;
+            border-top: 2px solid #444;
+        }
+
+        h4 {
+            color: #ddd;
+            font-family:cursive;
+        }
+
+        @media (max-width: 768px) {
+            .Menu-card {
+                flex-direction: column;
+                width: 90vw;
+                max-width: 100%;
+            }
+
+            .left-side, .right-side {
+                width: 100%;
+                padding: 20px;
+            }
+
+            .logo {
+                width: 60px;
+                height: 60px;
+            }
+
+            .large-text {
+                font-size: 2rem;
+            }
+
+            .small-text {
+                font-size: 0.9rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .large-text {
+                font-size: 1.5rem;
+            }
+
+            .small-text {
+                font-size: 0.8rem;
+            }
+
+            h2 {
+                font-size: 1rem;
+            }
+
+            p {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="Menu-card">
+            <div class="left-side">
+                <div class="large-text">Fast</div>
+                <div class="large-text">Food</div>
+                <div>
+                    <br/><br/>
+                    <h2>Pasta</h2>
+                    <p>Spaghetti Bolognaise.....15%</p>
+                    <p>Lasagne.....17%</p>
+                    <p>Fettuccine Alfredo.....16%</p>
+                    <p>Pasta Carbonara.....14%</p>
+                    <p>Ravioli.....15%</p>
+                    <p>Macaroni Cheese.....15%</p>
+                    <br/>
+                    <h2>Pizza</h2>
+                    <p>Pepperoni Pizza.....15%</p>
+                    <p>Pizza Italian Sausage.....17%</p>
+                    <p>Pizza Mushrooms.....16%</p>
+                    <p>Veggie Pizza.....15%</p>
+                    <p>Tomato Basil Pizza.....17%</p>
+                    <br/>
+                    <h2>Buns</h2>
+                    <p>Hot Dog.....15%</p>
+                    <p>Burger.....17%</p>
+                    <p>Pizza Rolls.....16%</p>
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="logo"></div>
+                <div class="small-text"><b>Z.FastFood</b></div>
+                <div class="img">
+                    <img src="pasta.jpg" alt="Pasta">
+                    <img src="pizza.jpg" alt="Pizza">
+                    <img src="buns.jpg" alt="Buns">
+                </div>
+                <footer>
+                    <h4>www.zfoodtop@mail.com</h4>
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
